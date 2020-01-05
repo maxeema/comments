@@ -4,7 +4,6 @@ import 'package:flutter/widgets.dart';
 
 import 'comments_widget.dart';
 import 'misc/insets.dart';
-import 'misc/extensions.dart';
 import 'model.dart';
 
 class CommentsPage extends StatelessWidget {
@@ -28,14 +27,14 @@ class CommentsPage extends StatelessWidget {
           ),
           SizedBox(height: 16,),
           SizedBox(
-            height: context.isLandscape ? 75 : 100,
+            height: 75,
             child: TextField(
               expands: true,
               minLines: null, maxLines: null,
               decoration: InputDecoration(
-                focusedBorder: OutlineInputBorder(
-                    borderSide: BorderSide(color: Colors.grey)
-                )
+                filled: true, fillColor: Colors.white,
+                enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey.withAlpha(150))),
+                focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.grey)),
               ),
             ),
           ),
